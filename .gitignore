@@ -1,0 +1,14 @@
+# Emacs
+\#*\#
+*_flymake.*
+
+# Node
+/node_modules
+package-lock.json
+/.pnp
+.pnp.js
+/coverage
+/build
+
+# macOS
+.DS_Store
