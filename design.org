@@ -1,0 +1,67 @@
+#+TITLE: Find a Language Design
+#+AUTHOR: Elliot Penson
+
+* User Stories
+
+  As a user, I would like to...
+
+  - Find the programming language that best matches my preferences.
+  - Learn more about the language I encounter.
+  - Discover similar languages to a given language.
+  - Browse a list of all programming languages.
+
+* Pages
+
+** Home Page
+
+   Users indicate which language attributes they prefer. For example, one may
+   declare a preference for static rather than dynamically-typed languages. Each
+   choice should be defined. The site navigates users to a page for the language
+   (/Language Page/) that best fits their preferences.
+
+   Users may also choose to navigate to a page that lists all languages (see
+   /Browse Page/ below).
+
+** Language Page
+
+   Contents:
+   - Large heading (e.g. ~Python~).
+   - Color from GitHub.
+   - Attributes (e.g. popularity, typing, paradigm, etc).
+   - Top projects (by GitHub stars).
+   - Similar languages.
+
+** Browse Page
+
+   A table of all programming languages with columns /Color/, /Name/, and
+   /Popularity/. Users can order by column.
+
+* Flow
+
+  #+BEGIN_SRC
+  Home -> Language | Browse
+  Language -> Home
+  Language -> Browse
+  #+END_SRC
+
+  ~Home~ will navigate users to ~Language~ after the user enters their language
+  preferences. A named link (e.g. "or view all languages") will let users
+  navigate to ~Browse~. ~Home~ and ~Browse~ will have a back arrow (or a home
+  icon).
+
+* Language Data Model
+
+  | Attribute   | Type       | Range                                    |
+  |-------------+------------+------------------------------------------|
+  | Typing      | Discrete   | [Static, Dynamic]                        |
+  | Paradigm    | Discrete   | [ObjectOriented, Functional, Imperative] |
+  | Age         | Continuous | Any historical date                      |
+  | Popularity  | Continuous | Any integers                             |
+  | Tags        | Discrete   | [Lisp, TypeInference, ...]               |
+  | Use Case    | Discrete   | [Browser, Server, Game Development, ...] |
+  | Performance | Discrete   | [Slow, Average, Fast]                    |
+
+* Libraries
+
+  - https://react-select.com/home#welcome
+  - https://github.com/IonicaBizau/github-colors
