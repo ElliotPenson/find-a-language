@@ -1,3 +1,3 @@
 # 🔍 Find a Language!
 
-View at [findalanguage.com](https://www.findalanguage.com).
+View at [findalanguage.com](http://www.findalanguage.com).
