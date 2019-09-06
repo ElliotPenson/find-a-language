@@ -1,3 +1,5 @@
+import GitHubColors from "github-colors";
+
 import { Language, Paradigm, Typing } from "./types";
 
 export const languages: Language[] = [
@@ -37,4 +39,8 @@ export const languages: Language[] = [
 
 export function getLanguage(key: string): Language | undefined {
   return languages.find(({ name }) => name.toUpperCase() === key.toUpperCase());
+}
+
+export function findColor(key: string): string {
+  return GitHubColors.get(key, true).color;
 }
