@@ -34,3 +34,7 @@ export const languages: Language[] = [
     ]
   }
 ];
+
+export function getLanguage(key: string): Language | undefined {
+  return languages.find(({ name }) => name.toUpperCase() === key.toUpperCase());
+}

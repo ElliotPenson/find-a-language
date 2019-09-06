@@ -5,14 +5,14 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./index.css";
 import { App } from "./components/App";
 import { Browse } from "./components/Browse";
-import { Language } from "./components/Language";
+import { View } from "./components/View";
 
 const routing = (
   <Router>
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/browse" component={Browse} />
-      <Route component={Language} />
+      <Route component={View} />
     </Switch>
   </Router>
 );
