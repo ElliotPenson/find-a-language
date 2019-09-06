@@ -1,12 +1,26 @@
 import React from "react";
+
+import { languages, findColor } from "../../languages";
+import { findTextColor } from "../../utils";
 import "./App.css";
 
 export function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Find a programming language.</h1>
-      </header>
+      {languages.map(language => {
+        const backgroundColor = findColor(language);
+        return (
+          <div
+            className="App-language"
+            style={{
+              backgroundColor,
+              color: findTextColor(backgroundColor)
+            }}
+          >
+            {language.name}
+          </div>
+        );
+      })}
     </div>
   );
 }

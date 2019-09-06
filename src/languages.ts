@@ -56,7 +56,7 @@ export const languages: Language[] = [
     ]
   },
   {
-    name: "Objective C",
+    name: "Objective-C",
     homepage: "https://developer.apple.com",
     extension: ".m",
     creationDate: "1984",
@@ -129,6 +129,6 @@ export function getLanguage(key: string): Language | undefined {
   return languages.find(({ name }) => name.toUpperCase() === key.toUpperCase());
 }
 
-export function findColor(key: string): string {
-  return GitHubColors.get(key, true).color;
+export function findColor(language: Language): string {
+  return GitHubColors.get(language.name, true).color;
 }
