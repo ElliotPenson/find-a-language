@@ -1,14 +1,14 @@
 import React from "react";
+import { DataTable } from "grommet";
 
 import { languages } from "../../languages";
-import { Language } from "../../types";
+
+const columns = [{ property: "name", header: "Name" }];
 
 export function Browse() {
   return (
     <div className="Browse">
-      {languages.map((language: Language) => {
-        return <div>{language.name}</div>;
-      })}
+      <DataTable columns={columns} data={languages} sortable />
     </div>
   );
 }
