@@ -11,7 +11,8 @@ export interface Language {
 export enum Paradigm {
   ObjectOriented = "OBJECT_ORIENTED",
   Functional = "FUNCTIONAL",
-  Imperative = "IMPERATIVE"
+  Imperative = "IMPERATIVE",
+  Logic = "LOGIC"
 }
 
 export enum Typing {
