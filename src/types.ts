@@ -1,4 +1,5 @@
 export interface Language {
+  key: string;
   name: string;
   homepage: string;
   extension: string;
@@ -23,7 +24,8 @@ export enum Typing {
 export enum Feature {
   Metaprogramming = "METAPROGRAMMING",
   Lisp = "LISP",
-  Strong = "STRONG",
-  Weak = "WEAK",
-  TypeInference = "TYPE_INFERENCE"
+  StrongTyping = "STRONG_TYPING",
+  WeakTyping = "WEAK_TYPING",
+  TypeInference = "TYPE_INFERENCE",
+  Pure = "PURE"
 }
